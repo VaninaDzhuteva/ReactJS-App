@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import Header from './components/header/Header.jsx'
 import './App.css'
 
 function App() {
 
   return (
     <>
+      <Header />
     </>
   )
 }

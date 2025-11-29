@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+body {
+    background-color: #FFF7ED;
+}
+
+#root {
+    max-width: none;
+    padding: 0;
+}
+
+.logo {
+    padding: 0;
+}
+
+.header {
+    align-items: center;
+}
+
+.primary-color {
+    color: #F97316;
+}
+
+.color-text {
+    color: #1F2937;
+}
