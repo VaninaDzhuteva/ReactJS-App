@@ -13,8 +13,13 @@ body {
     padding: 0;
 }
 
+.logo:hover {
+    filter: none;
+}
+
 .header {
     align-items: center;
+    justify-content: space-between;
 }
 
 .primary-color {
@@ -23,4 +28,14 @@ body {
 
 .color-text {
     color: #1F2937;
+}
+
+nav a:hover {
+    color: #F97316;
+}
+
+.focus\:outline-indigo-500 {
+    &:focus {
+        outline-color: transparent;
+    }
 }

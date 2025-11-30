@@ -2,7 +2,11 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import '../public/styles/index.css'
+import { BrowserRouter } from 'react-router'
 
 createRoot(document.getElementById('root')).render(
-    <App />
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+   
 )
