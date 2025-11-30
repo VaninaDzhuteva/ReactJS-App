@@ -1,0 +1,40 @@
+#root {
+    max-width: none;
+    padding: 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.logo {
+    padding: 0;
+}
+
+.logo:hover {
+    filter: none;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.color-text {
+    color: $color-text;
+}
+
+nav a:hover {
+    color: $primary-color;
+}
+
+.focus\:outline-indigo-500 {
+    &:focus {
+        outline-color: transparent;
+    }
+}
+
+.card {
+    width: 25%;
+}

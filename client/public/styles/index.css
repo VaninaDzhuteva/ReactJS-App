@@ -1,41 +1,16 @@
 @import "tailwindcss";
+@import "./base.scss";
+@import "./typography.scss";
+@import "./utilities.scss";
 
-body {
-    background-color: #FFF7ED;
-}
-
-#root {
-    max-width: none;
-    padding: 0;
-}
-
-.logo {
-    padding: 0;
-}
-
-.logo:hover {
-    filter: none;
-}
+/* Basic */
 
 .header {
     align-items: center;
     justify-content: space-between;
 }
 
-.primary-color {
-    color: #F97316;
-}
-
-.color-text {
-    color: #1F2937;
-}
-
-nav a:hover {
-    color: #F97316;
-}
-
-.focus\:outline-indigo-500 {
-    &:focus {
-        outline-color: transparent;
-    }
+/* Home page */
+.home-page {
+    padding: 60px 0;
 }

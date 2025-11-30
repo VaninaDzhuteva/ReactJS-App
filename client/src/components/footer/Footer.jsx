@@ -12,18 +12,16 @@ export default function Footer() {
         </div>
 
         {/* Navigation */}
-        <div>
+        {/* <div>
           <h3 className="text-lg font-semibold text-white mb-3">Navigation</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-white">Home</a></li>
             <li><a href="/recipes" className="hover:text-white">Recipes</a></li>
-            <li><a href="/categories" className="hover:text-white">Categories</a></li>
-            <li><a href="/about" className="hover:text-white">About</a></li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Account */}
-        <div>
+        {/* <div>
           <h3 className="text-lg font-semibold text-white mb-3">Account</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/login" className="hover:text-white">Login</a></li>
@@ -31,7 +29,7 @@ export default function Footer() {
             <li><a href="/profile" className="hover:text-white">My Profile</a></li>
             <li><a href="/add-recipe" className="hover:text-white">Add Recipe</a></li>
           </ul>
-        </div>
+        </div> */}
 
       </div>
 
