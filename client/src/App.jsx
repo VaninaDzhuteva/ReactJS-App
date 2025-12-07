@@ -1,9 +1,12 @@
 import { Routes, Route } from 'react-router';
-import Header from './components/header/Header.jsx'
-import Home from './components/home/Home.jsx'
-import Footer from './components/footer/Footer.jsx';
 import './App.css'
+import Home from './components/home/Home.jsx'
+import Header from './components/header/Header.jsx'
+import Footer from './components/footer/Footer.jsx';
 import Register from './components/register/Register.jsx';
+import Login from './components/login/Login.jsx';
+import Logout from './components/logout/Logout.jsx';
+import { GuestRoute, PrivateRoute } from './guards/AuthGuards.jsx';
 
 function App() {
 
@@ -13,9 +16,19 @@ function App() {
 
       <Routes>
         <Route index element={<Home />}></Route>
+        // todo update element for /recipes
         <Route path='/recipes' element={<Home />}></Route>
-        <Route path='/sign-up' element={<Register />} ></Route>
-        <Route path='/recipes' element={<Home />}></Route>
+
+        <Route element={<GuestRoute />}>
+          <Route path='/sign-up' element={<Register />} ></Route>
+          <Route path='/login' element={<Login />}></Route>
+        </Route>
+
+        // todo add more elements to private routes
+        <Route element={<PrivateRoute />}>
+          <Route path='/logout' element={<Logout />}></Route>
+        </Route>
+
       </Routes>
 
       <Footer />
