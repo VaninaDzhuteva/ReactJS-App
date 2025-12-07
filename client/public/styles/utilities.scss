@@ -29,9 +29,10 @@ nav a:hover {
     color: $primary-color;
 }
 
-.focus\:outline-indigo-500 {
+.focus\:outline-indigo-500,
+.focus\:outline-indigo-600 {
     &:focus {
-        outline-color: transparent;
+        outline-color: #d1d5dc;
     }
 }
 
