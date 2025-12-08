@@ -16,3 +16,20 @@ export async function register(email, password) {
 
     return await response.json();
 }
+
+export async function login(email, password) {
+    const response = await fetch(`${baseUrl}/login`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({email, password})
+    });
+
+    if (!response.ok) {
+        const error = await response.json();
+        throw new Error("Unable to login!" || error.message);
+    }
+
+    return await response.json();
+}

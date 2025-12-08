@@ -55,7 +55,11 @@ export default function Register() {
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 
-                    { error && <p className="error">{error}</p>}
+                    { error && 
+                        <div className="mt-3 mb-3">
+                            <p className="error">{error}</p>
+                        </div>        
+                    }
 
                     <form onSubmit={onSubmit} className="space-y-6">
                         <div>

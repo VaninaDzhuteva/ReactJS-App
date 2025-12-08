@@ -1,20 +1,34 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useContext } from 'react'
 import { Link } from 'react-router'
-
-
-const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Browse', href: '/recipes', current: false },
-  { name: 'Login', href: '/login', current: false },
-  { name: 'Sign up', href: '/sign-up', current: false },
-]
+import { UserContext } from '../../contexts/UserContext.jsx'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+
 export default function Header() {
+
+  const { isAuthenticated, user, logoutHandler } = useContext(UserContext);
+
+  const guestLinks = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Browse', href: '/recipes', current: false },
+    { name: 'Login', href: '/login', current: false },
+    { name: 'Sign up', href: '/sign-up', current: false },
+  ];
+
+  const userLinks = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Browse', href: '/recipes', current: false },
+    { name: `Logout`, href: '/logout', current: false, onClick: logoutHandler },
+  ];
+
+  const navigation = isAuthenticated ? userLinks : guestLinks;
+
   return (
     <Disclosure as="nav" className="relative">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

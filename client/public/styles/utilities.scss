@@ -1,3 +1,5 @@
+
+
 #root {
     max-width: none;
     padding: 0;
@@ -27,6 +29,10 @@
 
 nav a:hover {
     color: $primary-color;
+}
+
+.error {
+    color: #cc0000;
 }
 
 .focus\:outline-indigo-500,

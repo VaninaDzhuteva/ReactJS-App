@@ -1,4 +1,4 @@
-import { register } from "../services/authService.js";
+import { login, register } from "../services/authService.js";
 
 import { useState, useEffect, createContext } from "react";
 
@@ -26,16 +26,29 @@ export function UserProvider({children}) {
         }
     }, []);
 
+    // Register
     const registerHandler = async (email, password) => {
         const result = await register(email, password);
-        console.log(result);
         setUser(result);
+    }
+
+    // Login
+    const loginHandler = async(email, password) => {
+        const result = await login(email, password);
+        setUser(result);
+    }
+
+    // Logout
+    const logoutHandler = () => {
+        setUser(null);
+        localStorage.removeItem('user')
     }
 
     const contextValues = {
         user,
         isAuthenticated: !!user?.accessToken,
-        registerHandler
+        registerHandler,
+        loginHandler
     }
 
     return (
