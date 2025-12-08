@@ -7,6 +7,7 @@ import Register from './components/register/Register.jsx';
 import Login from './components/login/Login.jsx';
 import Logout from './components/logout/Logout.jsx';
 import { GuestRoute, PrivateRoute } from './guards/AuthGuards.jsx';
+import CreateRecipe from './components/recipes/CreateRecipe.jsx';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
 
         // todo add more elements to private routes
         <Route element={<PrivateRoute />}>
+          <Route path='/create-recipe' element={<CreateRecipe />}></Route>
           <Route path='/logout' element={<Logout />}></Route>
         </Route>
 

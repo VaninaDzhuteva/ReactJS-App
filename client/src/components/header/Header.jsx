@@ -22,6 +22,7 @@ export default function Header() {
   const userLinks = [
     { name: 'Home', href: '/', current: true },
     { name: 'Browse', href: '/recipes', current: false },
+    { name: 'Create recipe', href: '/create-recipe', current: false },
     { name: `Logout`, href: '/logout', current: false, onClick: logoutHandler },
   ];
 
