@@ -31,6 +31,9 @@ export async function login(email, password) {
         throw new Error("Unable to login!" || error.message);
     }
 
+    console.log(response);
+    
+
     return await response.json();
 }
 
