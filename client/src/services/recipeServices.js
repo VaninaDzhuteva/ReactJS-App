@@ -32,3 +32,25 @@ export async function create(data, token) {
 
     return response.json()
 }
+
+export async function update(id, data, token) {
+    const res = await fetch(`${baseUrl}/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Authorization': token
+        },
+        body: JSON.stringify(data)
+    });
+
+    return await res.json();
+}
+
+export async function remove(id, token) {
+    await fetch(`${baseUrl}/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'X-Authorization': token
+        }
+    });
+}

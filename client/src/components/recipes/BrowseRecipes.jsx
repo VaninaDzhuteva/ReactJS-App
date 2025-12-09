@@ -6,9 +6,9 @@ export default function BrowseRecipes() {
     return (
         <div className="container">
             <section className="browse-recipes">
-                <h1>Explore Delicious Recipes</h1>
+                <h1>Explore Our Delicious Recipes</h1>
 
-                <div className="mt-10">
+                <div className="mt-10 flex justify-between">
                     {
                         recipes.length === 0
                             ? <p>No recipes available</p>
