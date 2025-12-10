@@ -45,33 +45,34 @@ export default function RecipeCard({
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="card-content p-4 h-48">
         {/* Category Badge */}
         {/* <span
           className={`inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full ${badgeStyle}`}
         > */}
-          {/* <span>{icon}</span>
+        {/* <span>{icon}</span>
           {category}
         </span> */}
 
-        <h3 className="text-lg font-semibold mt-2">{title}</h3>
+        <h4 className="text-lg font-semibold mt-2">{title}</h4>
 
-        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
-          {description}
-        </p>
+        <div>
+          <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+            {description}
+          </p>
 
-        {/* Buttons */}
-        <div className="mt-4 flex items-center justify-center">
-          {/* View Recipe */}
-          <Link
-            to={`/recipes/${_id}`}
-            className="text-sm font-medium text-orange-600 hover:text-orange-700"
-          >
-            View Recipe →
-          </Link>
+          {/* Buttons */}
+          <div className="mt-4 flex items-center justify-center">
+            {/* View Recipe */}
+            <Link
+              to={`/recipes/${_id}`}
+              className="text-sm font-medium text-orange-600 hover:text-orange-700"
+            >
+              View Recipe →
+            </Link>
 
-          {/* Edit/Delete only if allowed */}
-          {/* {canEdit && (
+            {/* Edit/Delete only if allowed */}
+            {/* {canEdit && (
             <div className="flex gap-3">
               <Link
                 to={`/recipes/${id}/edit`}
@@ -87,6 +88,7 @@ export default function RecipeCard({
               </button>
             </div>
           )} */}
+          </div>
         </div>
       </div>
     </div>

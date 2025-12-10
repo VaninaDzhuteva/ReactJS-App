@@ -1,0 +1,12 @@
+.recipes-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+} 
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
