@@ -11,6 +11,7 @@ import CreateRecipe from './components/recipes/CreateRecipe.jsx';
 import BrowseRecipes from './components/recipes/BrowseRecipes.jsx';
 import RecipeDetails from './components/recipe-details/Recipedetails.jsx';
 import RecipeEdit from './components/recipe-edit/RecipeEdit.jsx';
+import NotFound from './components/not-found/NotFound.jsx';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
           <Route path='/recipes/:recipeId/edit' element={<RecipeEdit />}></Route>
           <Route path='/logout' element={<Logout />}></Route>
         </Route>
+
+        {/* Not found */}
+        <Route path='*' element={<NotFound />}></Route>
 
       </Routes>
 
