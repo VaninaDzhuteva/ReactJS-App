@@ -1,10 +1,19 @@
+import { Link } from "react-router";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 mt-10">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 ">
-        
+
         {/* Brand */}
         <div>
+          <Link to={'/'} className="flex justify-center">
+            <img
+              alt="Yumjam"
+              src="/images/white-logo.png"
+              className="logo"
+            />
+          </Link>
           <h2 className="text-2xl font-bold text-white">Yumjam</h2>
           <p className="mt-3 text-sm text-gray-400">
             Discover, create, and share delicious recipes every day.

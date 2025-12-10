@@ -30,7 +30,7 @@ export default function Header() {
   const navigation = isAuthenticated ? userLinks : guestLinks;
 
   return (
-    <Disclosure as="nav" className="relative">
+    <Disclosure as="nav" className="relative bg-gradient-to-r from-indigo-500 to-purple-600">
       
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -47,7 +47,7 @@ export default function Header() {
               <Link to={'/'}>
                 <img
                   alt="Yumjam"
-                  src="/images/yumjam-logo.png"
+                  src="/images/white-logo.png"
                   className="logo"
                 />
               </Link>

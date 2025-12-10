@@ -45,7 +45,7 @@ export default function RecipeCard({
       </div>
 
       {/* Content */}
-      <div className="card-content p-4 h-48">
+      <div className="card-content p-4">
         {/* Category Badge */}
         {/* <span
           className={`inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full ${badgeStyle}`}
@@ -66,9 +66,9 @@ export default function RecipeCard({
             {/* View Recipe */}
             <Link
               to={`/recipes/${_id}`}
-              className="text-sm font-medium text-orange-600 hover:text-orange-700"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:from-indigo-600 hover:to-purple-700 transition transform duration-300"
             >
-              View Recipe →
+              View Recipe
             </Link>
           </div>
         </div>

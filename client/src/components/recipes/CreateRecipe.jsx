@@ -162,7 +162,7 @@ export default function CreateRecipe() {
                     <div>
                         <button
                             type="submit"
-                            className="flex w-full justify-center rounded-md px-3 py-2 text-m/6 font-semibold text-white bg-indigo-600 shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-teal-500 text-white font-semibold rounded-lg shadow-md hover:from-green-500 hover:to-teal-600 transition transform duration-300"
                         >
                             Create Recipe
                         </button>
@@ -173,4 +173,3 @@ export default function CreateRecipe() {
 
     )
 }
-
