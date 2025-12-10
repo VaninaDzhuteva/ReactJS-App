@@ -3,10 +3,24 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-} 
+}
 
 .card-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.add-more {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+    min-height: 400px;
+    background-image: url('/images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

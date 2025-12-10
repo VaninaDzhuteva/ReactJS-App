@@ -1,17 +1,37 @@
 import { useRecipes } from "../../contexts/RecipeContext.jsx";
 import RecipeCard from "../recipe-card/RecipeCard.jsx";
+import { Link } from "react-router"
 
 export default function Home() {
     const { recipes } = useRecipes();
+    console.log(recipes);
+
 
     const latestRecipes = [...recipes]
-        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-        .slice(0, 4);
+        .sort((a, b) => new Date(b._createdOn) - new Date(a._createdOn))
+        .slice(0, 3);
 
     return (
         <div className="home-page">
             <div className="container">
-                <h1>Explore Delicious Recipes</h1>
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold text-gray-800">Discover Your Next Favorite Recipe</h1>
+                    <p className="mt-2 text-lg text-gray-600">Browse, create, and savor the most delicious recipes from our community. Find inspiration for every meal!</p>
+                </div>
+
+            </div>
+            <section className="cta add-more mt-10 text-center">
+                <h2>Share your favorite recipes!</h2>
+                <Link
+                    to="/create-recipe"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:from-indigo-600 hover:to-purple-700 transition transform duration-300"
+                >
+                    Add Recipe
+                </Link>
+
+            </section>
+            <div className="container">
+                <h2>Explore Delicious Recipes</h2>
 
                 <div className="recipes-container mt-10">
                     {
@@ -27,6 +47,8 @@ export default function Home() {
                             )
                     }
                 </div>
+
+
             </div>
 
         </div>

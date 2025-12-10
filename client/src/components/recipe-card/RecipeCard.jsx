@@ -70,24 +70,6 @@ export default function RecipeCard({
             >
               View Recipe →
             </Link>
-
-            {/* Edit/Delete only if allowed */}
-            {/* {canEdit && (
-            <div className="flex gap-3">
-              <Link
-                to={`/recipes/${id}/edit`}
-                className="text-sm text-blue-600 hover:text-blue-700"
-              >
-                Edit
-              </Link>
-              <button
-                onClick={() => onDelete(id)}
-                className="text-sm text-red-600 hover:text-red-700"
-              >
-                Delete
-              </button>
-            </div>
-          )} */}
           </div>
         </div>
       </div>
